@@ -1,0 +1,27 @@
+
+<br>
+
+<form id="updateForm" (submit)="addReview(kdrama)">
+<table>
+
+    <tr>
+        <td rowspan="9"><img src="{{kdrama.image}}" height="170px" width="124px"></td>
+        <td colspan="2"><b style="font-size: large;">{{title}}</b></td>
+        <td colspan="2"><b style="font-size: large;">{{genre}}</b></td>
+    </tr>
+    <tr>
+        <td>My review</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><textarea rows="3" cols="80" value="{{kdrama.review}}" name="review" [(ngModel)]="kdrama.review"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+            <button type="submit" class="btn btn-danger" style="cursor:pointer; width: 100px; margin: 10px 10px 10px 0px"> Update </button>
+            <a routerLink="/userdashboard/{{user.userid}}/mykdramas" class="btn btn-warning" style="cursor:pointer" style="width: 100px;"> Cancel </a>
+        </td>
+    </tr>
+
+</table>
+</form>
